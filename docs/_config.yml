@@ -31,6 +31,16 @@ theme: minima
 plugins:
   - jekyll-feed
 
+header_pages:
+  - posts.md
+  - games.md
+  - index.md
+
+collections:
+  games:
+    output: true
+
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

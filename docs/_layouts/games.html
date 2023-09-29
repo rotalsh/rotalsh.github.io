@@ -11,21 +11,21 @@ layout: base
 
 
   {% if site.paginate %}
-    {% assign posts = paginator.posts %}
+    {% assign games = paginator.games %}
   {% else %}
-    {% assign posts = site.posts %}
+    {% assign games = site.games %}
   {% endif %}
 
 
-  {%- if posts.size > 0 -%}
+  {%- if games.size > 0 -%}
     <ul class="post-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
+      {%- for game in games -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
+          <a class="post-link" href="{{ game.url | relative_url }}">
+            {{ game.title | escape }}
           </a>
         </h3>
         {%- if site.show_excerpts -%}
