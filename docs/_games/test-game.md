@@ -1,16 +1,19 @@
 ---
 layout: game
 title: "Test Game"
-url: /test-game/
-script: "phaser.js"
+external_js: 
 ---
 
-<p id="demo">A Paragraph.</p>
 
-<button type="button" onclick="myFunction()">Try it</button>
+<style type="text/css">
+  canvas {
+    padding: 0;
+    margin: auto;
+    display: block;
+    width: 800px;
+    height: 600px;
+  }
+</style>
 
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-</script>
+<script></script>
+

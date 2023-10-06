@@ -3,24 +3,34 @@
 
 {%- include head.html -%}
 
+<head>
+  {% if page.internal_js %}
+    {% for js_file in page.internal_js %}
+      <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}"></script>
+    {% endfor %}
+  {% endif %}
+
+  {% if page.external_js %}
+    {% for js_file in page.external_js %}
+      <script type="text/javascript" src="{{ js_file }}"></script>
+    {% endfor %}
+  {% endif %}
+</head>
+
 <body>
 
-    {%- include header.html -%}
+  {%- include header.html -%}
 
-    <main class="page-content" aria-label="Content">
-        <div class="wrapper">
-            {{ content }}
-        </div>
-    </main>
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
 
-    {%- include footer.html -%}
+  {%- include footer.html -%}
 
 </body>
 
-{% if page.custom_js %}
-    {% for js_file in page.custom_js %}
-      <script type="text/javascript" src="{{ site.baseurl }}/assets/js/{{ js_file }}"></script>
-    {% endfor %}
-  {% endif %}   
+
 
 </html>
