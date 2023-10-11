@@ -1,7 +1,7 @@
 ---
 layout: game
 title: "Test Game"
-external_js: 
+# external_js: //cdn.jsdelivr.net/npm/phaser@3.11.0/dist/phaser.js
 ---
 
 
@@ -15,5 +15,8 @@ external_js:
   }
 </style>
 
-<script></script>
+<!-- canvas: document.getElementById('gameCanvas') -->
+
+<script>
+</script>
 
